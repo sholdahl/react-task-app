@@ -22,7 +22,7 @@ class App extends Component {
   onSubmitTask = (e) => {
     e.preventDefault();
     this.setState({
-      tasks: this.state.tasks.concat(this.state.task),
+      tasks: [...this.state.tasks, {task: this.state.task, number: this.state.tasks.length}],
       task: "",
     });
   };
